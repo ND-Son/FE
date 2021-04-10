@@ -13,14 +13,6 @@ public class Unit{
 		this.stat = bases;
 	}
 
-	public static void main(String[] args){
-		byte bases[] = {10, 1, 1, 1, 1, 1, 1, 1, 1,};
-		Unit Marth = new Unit("Marth", bases);
-		Unit Ceada = new Unit("Ceada", bases);
-		Marth.statline();
-		Ceada.statline();
-	}
-
 	// Start of methods
 
 	public void statline(){
@@ -31,5 +23,22 @@ public class Unit{
 		}
 	}
 
+	// Getters
+	public String name(){
+		return this.name;
+	}
+	public byte str(){
+		return this.stat[1];
+	}
+
+	public byte hp(){
+		return this.stat[0];
+	}
+
+	// Setters
+
+	public void setHP(byte hp){
+		this.stat[0] = hp;
+	}
 	// End of methods
 }
